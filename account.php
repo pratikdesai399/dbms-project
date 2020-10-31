@@ -39,7 +39,7 @@
 		}
 
 		if(count($error)==0){
-			$query = "INSERT INTO patient (firstname, surname, username, email, phone, gender, country, password, date_reg, profile) VALUES ('pratik', 'desai', 'pratik', 'asd@asd.com', '123456789', 'Male', 'India', 'pass', NOW(), 'asd.png');";
+			$query = "INSERT INTO patient (firstname, surname, username, email, phone, gender, country, password, date_reg, profile) VALUES ('$fname', '$sname', '$uname', '$email', '$phone', '$gender', '$country', '$password', NOW(), 'patient.png');";
 
 			$res = mysqli_query($connect,$query);
 			if($res){
