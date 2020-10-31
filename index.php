@@ -27,7 +27,7 @@
 					<img src="img/pat.jpg" style="width:100%;height: 200px">
 
 					<h5 class="text-center my-3">CREATE ACCOUNT SO THAT WE CAN TAKE CARE OF YOU</h5>
-					<a href="#"><button class="btn btn-success my-3" style="margin-left: 20%">CREATE ACCOUNT</button></a>
+					<a href="account.php"><button class="btn btn-success my-3" style="margin-left: 20%">CREATE ACCOUNT</button></a>
 					
 					
 				</div>
