@@ -62,6 +62,7 @@
 				<input type="password" name="pass" class="form-control" placeholder="ENTER PASSWORD">
 			</div>
 			<input type="submit" name="login" class="btn btn-primary" >
+            <p>I do not have an account <a href="apply.php">Apply Now!!!</a></p>
         </form>
     </div>
 </body>

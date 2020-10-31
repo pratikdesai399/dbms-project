@@ -18,7 +18,13 @@
 
         while($row = mysqli_fetch_array($result)){
 		    $username = $row['username'];
-		    $profiles = $row['profile'];
+            $profiles = $row['profile'];
+            $firstname = $row['firstname'];
+            $lastname = $row['surname'];
+            $email = $row['email'];
+            $department = $row['department'];
+            $phone = $row['phone'];
+            $salary = $row['salary'];
 	    }
 
     ?>
@@ -60,19 +66,31 @@
                                             </tr>
                                             <tr>
                                                 <td> Firstname</td>
-                                                <td> <?php echo $row['username']; ?></td>
+                                                <td> <?php echo $firstname; ?></td>
                                             </tr>
                                             <tr>
                                                 <td> Surname</td>
-                                                <td> <?php echo $row['username']; ?></td>
+                                                <td> <?php echo $lastname; ?></td>
                                             </tr>
                                             <tr>
                                                 <td> Username</td>
-                                                <td> <?php echo $row['username']; ?></td>
+                                                <td> <?php echo $username; ?></td>
                                             </tr>
                                             <tr>
                                                 <td> Email</td>
-                                                <td> <?php echo $row['username']; ?></td>
+                                                <td> <?php echo $email; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td> Department</td>
+                                                <td> <?php echo $department; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td> Phone</td>
+                                                <td> <?php echo $phone; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td> Salary</td>
+                                                <td> <?php echo $salary; ?></td>
                                             </tr>
                                         </table>
                                     </div>
