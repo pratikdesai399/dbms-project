@@ -15,30 +15,20 @@
 
 		<ul class="navbar-nav">
 			<?php
-
 			if(isset($_SESSION['admin'])){
-
 				$user = $_SESSION['admin'];
-				
-
-				echo '
-
-			<li class="nav-item"><a href="" class="nav-link text-white">'.$user.'</a></li>
-			<li class="nav-item"><a href="logout.php" class="nav-link text-white">Log Out</a></li>
-
-				';
+					echo '
+						<li class="nav-item"><a href="" class="nav-link text-white">'.$user.'</a></li>
+						<li class="nav-item"><a href="logout.php" class="nav-link text-white">Log Out</a></li>
+					';
 			}else{
 				echo '<li class="nav-item"><a href="adminlogin.php" class="nav-link text-white">ADMIN</a></li>
-			<li class="nav-item"><a href="" class="nav-link text-white">DOCTOR</a></li>
-			<li class="nav-item"><a href="" class="nav-link text-white">PATIENT</a></li>';
+					<li class="nav-item"><a href="doctorlogin.php" class="nav-link text-white">DOCTOR</a></li>
+					<li class="nav-item"><a href="" class="nav-link text-white">PATIENT</a></li>';
 			}
-
 			?>
 		</ul>
 	</nav>
-
-
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
