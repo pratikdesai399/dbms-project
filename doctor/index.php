@@ -22,27 +22,77 @@
                 </div>
 
                 <div class="col-md-10">
-                    <h5 class="my-2">DOCTOR DASHBOARD</h5>
                     
-                    <div class="col-md-3 bg-success mx-2" style="height: 130px;">
+                    
+                    <div class="container-fluid">
+                        <h5 class="my-2">DOCTOR DASHBOARD</h5>
+                        <div class="col-md-12"> 
+                            <div class="row ">
+                                
+                                <div class="col-md-3 my-2 bg-info " style="height:150px;">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <h5 class="text-white my-4"> My Profile</h5>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <a  href="profile.php">pic</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 my-2 bg-warning" style="height:150px;">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <h5 class="text-white my-2" style="font-size: 30px;"> 0</h5>
+                                                <h5 class="text-white"> Total</h5>
+                                                <h5 class="text-white"> Patient</h5>
+                                            </div>
+                                            <div class="col-md-4">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 my-2 bg-success" style="height:150px;">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <h5 class="text-white my-2" style="font-size: 30px"> 0</h5>
+                                                <h5 class="text-white "> Total</h5>
+                                                <h5 class="text-white my-4"> Appointments</h5>
+                                            </div>
+                                            <div class="col-md-4">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-md-3 bg-success mx-2" style="height: 130px;">
                         <div class="col-md-12">
                             <div class="row">
+                            
                                 <div class="col-md-8">
-                                    <?php
+                                    //<?php
                                     //  $ad = mysqli_query($connect,"select * from admin");
                                     //  $num = mysqli_num_rows($ad); 
-                                    ?>
-                                    <!-- <h5 class="my-2 text-white " style="font-size: 30px;"><?php echo $num ?></h5> -->
-                                    <h5 class="text-white">Total Appointments</h5>
-                                </div>
+                                    //?>
+                                    <h5 class="my-2 text-white " style="font-size: 30px;"><?php echo $num ?></h5> -->
+                                    <!-- <h5 class="text-white">Total Appointments</h5> -->
+                                <!-- </div> -->
                                         <!-- <div class="col-md-4"> -->
                                             <!-- <a href="admin.php"><i class="fa fa-user-cog fa-3x my-4" style="color: white;"></i></a>											 -->
                                         <!-- </div> -->
                             </div>
                         </div>
-                    </div>
-
-                    
+                    </div>                     -->
                 </div>
             </div>
         </div>
