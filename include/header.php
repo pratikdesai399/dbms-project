@@ -36,8 +36,10 @@
 					';
 			}
 			else{
-				echo '<li class="nav-item"><a href="adminlogin.php" class="nav-link text-white">ADMIN</a></li>
-					<li class="nav-item"><a href="doctorlogin.php" class="nav-link text-white">DOCTOR</a></li>
+				echo '
+					<li class="nav-item"><a href="index.php" class="nav-link text-white">Home</a></li>
+					<li class="nav-item"><a href="adminlogin.php" class="nav-link text-white">ADMIN</a></li>
+					<li class="nav-item"><a href="./	doctorlogin.php" class="nav-link text-white">DOCTOR</a></li>
 					<li class="nav-item"><a href="patientlogin.php" class="nav-link text-white">PATIENT</a></li>';
 			}
 			?>

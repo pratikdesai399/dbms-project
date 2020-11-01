@@ -22,7 +22,7 @@
             $firstname = $row['firstname'];
             $lastname = $row['surname'];
             $email = $row['email'];
-            $department = $row['department'];
+            // $department = $row['department'];
             $phone = $row['phone'];
             $salary = $row['salary'];
 	    }
@@ -79,10 +79,6 @@
                                             <tr>
                                                 <td> Email</td>
                                                 <td> <?php echo $email; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td> Department</td>
-                                                <td> <?php echo $department; ?></td>
                                             </tr>
                                             <tr>
                                                 <td> Phone</td>

@@ -8,25 +8,40 @@
         
         $error = array();
 
+        $query1 = "select * from doctor where username='$username' and password='$password'";
+        $result1 = mysqli_query($connect, $query1);
+        $row = mysqli_fetch_array($result1);
+
+        
         if(empty($username)){
-            $error['doctor'] = "ENTER USERNAME";
+            $error['login'] = "ENTER USERNAME";
         }else if(empty($password)){
-            $error['doctor'] = "ENTER PASSWORD";
+            $error['login'] = "ENTER PASSWORD";
+        }else if($row['status'] == "Pending"){
+            $error['login'] = "Please wait for the admin to confirm"; 
+        }else if($row['pending'] == "Rejected"){
+            $error['status'] = "Try Again Later"; 
         }
 
         if(count($error)==0){
             $query = " select * FROM doctor WHERE username = '$username' and password = '$password'";
             $result = mysqli_query($connect, $query);
-            
-            if(mysqli_num_rows($result)==1){
-                echo "<script>alert('ADMIN LOGGED IN SUCCESSFULLY')</script>";
+            if(mysqli_num_rows($result)){
+                echo "<script>alert('Done')</script>";
                 $_SESSION['doctor'] = $username;
                 header("Location:doctor/index.php");
-            }
-            else{
-                echo "<script>alert('INVALID CREDENTIALS!!')</script>";
+            }else{
+                $error['login'] = "Invalid Login";
+                echo "<script>alert('Invalid Credentials!!')</script>";
             }
         }
+    }
+
+    if(isset($error['login'])){
+        $l = $error['login'];
+        $show = "<h5 class='text-center alert alert-danger'>'$l'</h5>";
+    }else{
+        $show = "";
     }
 ?>
 
@@ -41,18 +56,10 @@
     <?php include("include/header.php")?>
 
     <div>
+        <div>
+            <?php echo $show;?>
+        </div>
         <form method="post" class="m-2">
-            <?php
-                if(isset($error['doctor'])){
-                    $sh = $error['doctor'];
-                    $show = "<h4 class='alert alert-danger'>ENTER CREDENTIALS</h4>";
-                }
-                else{
-                    $show = "";
-                }
-                echo $show;
-            ?>
-
             <div class="form-group">
                 <label>Username</label>
 				<input type="text" name="uname" class="form-control" autocomplete="off" placeholder="ENTER USERNAME">
