@@ -70,7 +70,7 @@
                                     <td>".$row['salary']."</td>
                                     <td>".$row['data_reg']."</td>
                                     <td>
-                                        <a href='' class=''>
+                                        <a href='edit.php?id=".$row['id']."'>
                                             <button class='btn btn-success'>Edit</button>
                                         </a>
                                     </td>
