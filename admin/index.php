@@ -124,13 +124,17 @@ session_start();
 
 								<div class="col-md-12">
 									<div class="row">
-										<div class="col-md-8">
-											<h5 class="my-2 text-white " style="font-size: 30px;">0</h5>
+										<div class="col-md-8" style="margin-left: -30">
+											<?php
+												$job = mysqli_query($connect, "select * from doctor where status='Pending'");
+												$num1 = mysqli_num_rows($job);
+											?>
+											<h5 class="my-2 text-white " style="font-size: 30px;"> <?php echo $num1; ?> </h5>
 											<h5 class="text-white">Total</h5>
 											<h5 class="text-white">Job Requests</h5>
 										</div>
 										<div class="col-md-4">
-											<a href="#"><i class="fa fa-edit fa-3x my-4" style="color: white;"></i></a>
+											<a href="job_request.php"><i class="fa fa-edit fa-3x my-4" style="color: white;"></i></a>
 											
 										</div>
 									</div>
@@ -145,6 +149,7 @@ session_start();
 								<div class="col-md-12">
 									<div class="row">
 										<div class="col-md-8">
+											
 											<h5 class="my-2 text-white " style="font-size: 30px;">0</h5>
 											<h5 class="text-white">Total</h5>
 											<h5 class="text-white">Income</h5>
