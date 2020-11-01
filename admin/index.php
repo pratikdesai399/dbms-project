@@ -110,12 +110,19 @@ session_start();
 								<div class="col-md-12">
 									<div class="row">
 										<div class="col-md-8">
-											<h5 class="my-2 text-white " style="font-size: 30px;">0</h5>
+
+											<?php 
+
+											$r = mysqli_query($connect,"select * from report");
+											$rr = mysqli_num_rows($r);
+
+											 ?>
+											<h5 class="my-2 text-white " style="font-size: 30px;"><?php echo $rr; ?></h5>
 											<h5 class="text-white">Total</h5>
 											<h5 class="text-white">Reports</h5>
 										</div>
 										<div class="col-md-4">
-											<a href="#"><i class="fa fa-flag fa-3x my-4" style="color: white;"></i></a>
+											<a href="report.php"><i class="fa fa-flag fa-3x my-4" style="color: white;"></i></a>
 											
 										</div>
 									</div>
@@ -154,13 +161,23 @@ session_start();
 								<div class="col-md-12">
 									<div class="row">
 										<div class="col-md-8">
+
+											<?php 
+											$in = mysqli_query($connect,"select sum(amount_paid) as profit from income");
+											$row = mysqli_fetch_array($in);
+											$inc = $row['profit'];
+
+
+											 ?>
+
 											
-											<h5 class="my-2 text-white " style="font-size: 30px;">0</h5>
+											
+											<h5 class="my-2 text-white " style="font-size: 30px;"><?php echo "Rs $inc"; ?></h5>
 											<h5 class="text-white">Total</h5>
 											<h5 class="text-white">Income</h5>
 										</div>
 										<div class="col-md-4">
-											<a href="#"><i class="fa fa-rupee-sign fa-3x my-4" style="color: white;"></i></a>
+											<a href="income.php"><i class="fa fa-rupee-sign fa-3x my-4" style="color: white;"></i></a>
 											
 										</div>
 									</div>
