@@ -46,11 +46,23 @@
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-8">
-                                                <h5 class="text-white my-2" style="font-size: 30px;"> 0</h5>
+
+
+                                                <?php 
+
+                                                $p = mysqli_query($connect, "select * from patient");
+                                                $pp = mysqli_num_rows($p);
+
+
+
+
+                                                 ?>
+                                                <h5 class="text-white my-2" style="font-size: 30px;"><?php echo $pp; ?></h5>
                                                 <h5 class="text-white"> Total</h5>
                                                 <h5 class="text-white"> Patient</h5>
                                             </div>
                                             <div class="col-md-4">
+                                                <a href="patient.php"><i class="fa fa-procedures fa-3x my-4"></i></a>
 
                                             </div>
                                         </div>
