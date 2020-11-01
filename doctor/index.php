@@ -36,13 +36,13 @@
                                                 <h5 class="text-white my-4"> My Profile</h5>
                                             </div>
                                             <div class="col-md-4">
-                                                <a  href="profile.php">pic</a>
+                                                <a href="profile.php"><i class="fa fa-user-cog fa-3x my-4" style="color: white;"></i></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="col-md-3 my-2 bg-warning" style="height:150px;">
+                                <div class="col-md-3 my-2 mx-2 bg-warning" style="height:150px;">
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-8">
@@ -62,7 +62,7 @@
                                                 <h5 class="text-white"> Patient</h5>
                                             </div>
                                             <div class="col-md-4">
-                                                <a href="patient.php"><i class="fa fa-procedures fa-3x my-4"></i></a>
+                                                <a href="patient.php"><i class="fa fa-procedures fa-3x my-4" style="color: white;"></i></a>
 
                                             </div>
                                         </div>
@@ -73,11 +73,24 @@
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-8">
-                                                <h5 class="text-white my-2" style="font-size: 30px"> 0</h5>
+
+
+
+                                                <?php 
+                                                $t = mysqli_query($connect,"select * from appointment where status = 'Pending'");
+                                                $tt = mysqli_num_rows($t);
+
+
+
+
+                                                 ?>
+                                                <h5 class="text-white my-2" style="font-size: 30px"> <?php echo $tt; ?></h5>
                                                 <h5 class="text-white "> Total</h5>
                                                 <h5 class="text-white my-4"> Appointments</h5>
                                             </div>
                                             <div class="col-md-4">
+
+                                                <a href="appointment.php"><i class="fa fa-calendar fa-3x my-4" style="color: white;"></i></a>
 
                                             </div>
                                         </div>

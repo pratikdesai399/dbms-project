@@ -46,7 +46,7 @@
 	 											<h5 class="text-white my-4">Book Appointment</h5>
 	 										</div>
 	 										<div class="col-md-4">
-	 											<a href="#"><i class="fa fa-calendar fa-3x my-4" style="color:white;" ></i></a>
+	 											<a href="appointment.php"><i class="fa fa-calendar fa-3x my-4" style="color:white;" ></i></a>
 	 										</div>
 	 									</div>
 	 								</div>
@@ -64,7 +64,7 @@
 	 											<h5 class="text-white my-4">My Invoice</h5>
 	 										</div>
 	 										<div class="col-md-4">
-	 											<a href="#"><i class="fas fa-file-invoice-dollar fa-3x my-4" style="color:white;" ></i></a>
+	 											<a href="invoice.php"><i class="fas fa-file-invoice-dollar fa-3x my-4" style="color:white;" ></i></a>
 	 										</div>
 	 									</div>
 	 								</div>

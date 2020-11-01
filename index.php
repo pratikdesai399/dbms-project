@@ -6,7 +6,7 @@
 	<title></title>
 </head>
 <body>
-	<?php include("include/header.php")?>
+	<?php include("include/header.php");?>
 
 
 	<div style="margin-top:50px"></div>
