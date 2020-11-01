@@ -25,7 +25,7 @@
     if(mysqli_num_rows($res) < 1){
         $output .= '
             <tr class="">
-                <td colspan="8">No Job Request</td>
+                <td colspan="8" class="text-center">No Job Request</td>
             </tr>
         ';
     }

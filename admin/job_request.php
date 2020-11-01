@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <script>
+    <script type="text/javascript">
         $(document).ready(function(){
             show();
             function show(){
@@ -42,7 +42,36 @@
                     }
                 });
             }
+
+            $(document).on('click', '.approve', function(){
+                var id = $(this).attr("id");
+                // alert(id);
+                
+                $.ajax({
+                    url: "ajax_approve.php",
+                    method: "POST",
+                    data: {id:id},
+                    success: function(data){
+                        show();
+                    }
+                });
+            });
+
+             $(document).on('click', '.reject', function(){
+                var id = $(this).attr("id");
+                // alert(id);
+                
+                $.ajax({
+                    url: "ajax_reject.php",
+                    method: "POST",
+                    data: {id:id},
+                    success: function(data){
+                        show();
+                    }
+                });
+            });
         })
+        
     </script>
 
 
