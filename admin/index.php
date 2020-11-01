@@ -160,6 +160,7 @@ session_start();
 								<div class="col-md-12">
 									<div class="row">
 										<div class="col-md-8">
+											
 											<h5 class="my-2 text-white " style="font-size: 30px;">0</h5>
 											<h5 class="text-white">Total</h5>
 											<h5 class="text-white">Income</h5>
