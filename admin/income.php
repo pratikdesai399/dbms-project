@@ -64,7 +64,7 @@
 	 						<td>".$row['id']."</td>
 	 						<td>".$row['doctor']."</td>
 	 						<td>".$row['patient']."</td>
-	 						<td>".$row['date_discharged']."</td>
+	 						<td>".$row['date_discharge']."</td>
 	 						<td>".$row['amount_paid']."</td>
 
 	 					</tr>";

@@ -10,7 +10,7 @@
 		<a href="profile.php" class="list-group-item list-group-item-action bg-info text-center text-white">PROFILE</a>
 		<a href="patient.php" class="list-group-item list-group-item-action bg-info text-center text-white">PATIENT</a>
 		<a href="appointment.php" class="list-group-item list-group-item-action bg-info text-center text-white">APPOINTMNET</a>
-		<a href="report.php" class="list-group-item list-group-item-action bg-info text-center text-white">REPORT</a>
+		
 	</div>
 
 </body>
