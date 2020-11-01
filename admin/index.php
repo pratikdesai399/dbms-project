@@ -73,7 +73,7 @@ session_start();
 											<h5 class="text-white">Doctors</h5>
 										</div>
 										<div class="col-md-4">
-											<a href="#"><i class="fa fa-user-md fa-3x my-4" style="color: white;"></i></a>
+											<a href="doctor.php"><i class="fa fa-user-md fa-3x my-4" style="color: white;"></i></a>
 											
 										</div>
 									</div>

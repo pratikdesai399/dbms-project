@@ -11,7 +11,7 @@
 
 		<a href="admin.php" class="list-group-item list-group-item-action bg-info text-center text-white">ADMINS</a>
 
-		<a href="" class="list-group-item list-group-item-action bg-info text-center text-white">DOCTORS</a>
+		<a href="doctor.php" class="list-group-item list-group-item-action bg-info text-center text-white">DOCTORS</a>
 
 		<a href="" class="list-group-item list-group-item-action bg-info text-center text-white">PATIENTS</a>
 	</div>
