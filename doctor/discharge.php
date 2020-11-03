@@ -36,6 +36,8 @@
 
 					}
 
+					
+
 
 
 					 ?>
@@ -76,6 +78,8 @@
 									</tr>
 									
 								</table>
+
+								
 							</div>
 							<div class="col-md-6">
 								<h5 class="text-center my-1">Invoice</h5>
@@ -94,6 +98,7 @@
 									}else{
 
 										$doc = $_SESSION['doctor'];
+										
 										$fname = $row['firstname'];
 
 										$query = "insert into income(doctor,patient,date_discharge,amount_paid,description) values('$doc','$fname',NOW(),'$fee','$des')";
@@ -104,11 +109,27 @@
 											echo "<script>alert('You have sent an INVOICE')</script>";
 
 											mysqli_query($connect,"update appointment set status='Discharged' where id = '$id'");
+											mysqli_query($connect,"delete from room where patient = '$fname'");
 										}
 
 
 									}
 
+								}
+
+								if(isset($_POST['roomtype'])){
+									$type = $_POST['type'];
+
+									$fname = $row['firstname'];
+
+									$query = "insert into room(type,patient,status) values('$type','$fname','Occupied')";
+
+									$res = mysqli_query($connect,$query);
+									if($res){
+											echo "<script>alert('Room has been assigned')</script>";
+
+											
+										}
 								}
 
 
@@ -126,6 +147,25 @@
 
 									<input type="submit" name="send" class="btn btn-info my-2" value="Send">
 								</form>
+								<br>
+								<br>
+								<br>
+								<form method="post">
+
+									<select class="form-control" name="type">
+										<option>SELECT ROOM TYPE</option>
+										<option value="Single Room">Single Room</option>
+										<option value="Shared Room">Shared Room</option>
+									</select>
+									<br>
+									
+
+									<label>Assign Room</label>
+
+									<input type="submit" name="roomtype" class="btn btn-success my-2">
+									
+								</form>
+								
 							</div>
 						</div>
 					</div>
